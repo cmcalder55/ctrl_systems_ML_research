@@ -13,11 +13,25 @@ Magneto-optical traps (MOTs) use lasers and magnetic fields to cool and slow dow
 Slowing down the atoms makes it significantly easier to study the atom's quantum characteristics. For example, if you are trying to read the license plate on a car, the slower the car the easier it is to read. The same concept applies to quantum properties of atoms. There are many parameters that must be controlled to run this experiment, typically requiring multiple skilled experimentalists and a huge time investment just to set up. It is very sensitive to environmental variables like ambient temperature and light, making it difficult to maintain experimental conditions. Very small changes such as microscropic drift over time in parts of the experimental setup can be the difference between a successful run and no atom cloud output at all.  
 
 ## Motivation
+- experimental setup  
+- tedious
+- safety concerns
+- commercial slns and limits  
+- repeatability trade-off
 
 ## Methods  
+- traducer setup design
+- LV controller
+- python controls of controller  
+- homing
+- message queuer setup
+- feedback details  
+- python optimizer
 
 ## Results  
+- system response
+- testing and optimization
 
 ## Discussion
 
-## Future Work
+## Summary and Outlook
