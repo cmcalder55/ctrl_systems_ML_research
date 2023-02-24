@@ -46,9 +46,13 @@ The overall objective of this project was to use automation approaches and optim
 ### Commercial Solutions
 A huge limitation to solving this problem to automatic mount adjustment is the high level of precision required and lack of space in the set-up to add transducers. When working on an atomic level, an adjustment of a few micrometers can completely misalign a mirror. Stepper motors, for example, can be controlled remotely and make fine adjustments, but they are too large and unstable to use.   
 The mirror mounts on the experiment also function using a piezoelectric material, so they have a high hysteresis rate and have no built-in compensation system. Inertial actuators can be added to help have a more consistent step-size during adjustment, but they still have an open-loop design with up to 20% error between steps. The inertial actuators also limit the range of the adjuster screws while doubling their profile length, making them unusable.
+![image](https://user-images.githubusercontent.com/67109992/221067162-e4b907c1-b49d-46b3-b776-b85069d00dd0.png)
+![image](https://user-images.githubusercontent.com/67109992/221067178-014d4d5e-230f-4ea5-a7a6-fded2ba032ac.png)
+
 
 ### Repeatability Trade-Off
 The piezoelectric mirror mounts come with a controller that can be operated remotely, but the controls are not customizable to the level needed for this experiment, and the screw distance travelled is not repeatable. However, it is possible to make very fine adjustments manually due to the piezoelectric effect. This also has the advantage of being self-locking while at rest or while no power is applied, but the adjustments made to get to a position are not repeatable. This is due to a variety of reasons such as variation between mount components, variable friction when turning the screw forwards or backwards, and high hysteresis when making steps of the same size. 
+![image](https://user-images.githubusercontent.com/67109992/221067229-50774f3c-cda5-45d1-bc7f-2a2f420f4f77.png)
 
 ## Methods  
 To compensate for this error, small rotary encoders were inserted into the adjuster screws and attached to the mount using existing screw holes. The 360 degree turn of the screw is proportional to the 0-5 V. output of the rotary encoder, giving the relative position of the screw. This information can then be used to create a feedback system using a custom P.I. controller to automatically correct positional error, as well as define and map the global screw position to utilize the full range of adjustments.  
